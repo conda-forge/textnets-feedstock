@@ -5,9 +5,13 @@ Home: https://textnets.readthedocs.io
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/textnets-feedstock/blob/master/LICENSE.txt)
 
 Summary: Automated text analysis with networks
+
+Development: https://github.com/jboynyc/textnets
+
+Documentation: https://textnets.readthedocs.io
 
 textnets represents collections of texts as networks of documents and
 words. This provides novel possibilities for the visualization and analysis
