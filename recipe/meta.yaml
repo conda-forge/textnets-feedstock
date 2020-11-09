@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - textnets = textnets.cli:main
@@ -31,6 +31,8 @@ requirements:
     - scipy >=1.5
     - toolz
     - leidenalg >=0.8
+    - typing-extensions
+    - cached-property
 
 test:
   imports:
