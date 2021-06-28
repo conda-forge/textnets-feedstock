@@ -19,12 +19,13 @@ requirements:
   host:
     - python >=3.7
     - pip
+  build:
+    - poetry >=1.1
   run:
     - cached-property
     - cairocffi >=1.1
     - leidenalg >=0.8
     - pandas >1.2
-    - poetry >=1.1
     - python >=3.7
     - python-igraph >=0.9
     - scipy >=1.7
