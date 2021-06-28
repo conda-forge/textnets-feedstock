@@ -16,11 +16,10 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
-    - poetry >=1.1
   host:
-    - python >=3.7
     - pip
+    - poetry >=1.1
+    - python >=3.7
   run:
     - cached-property
     - cairocffi >=1.1
