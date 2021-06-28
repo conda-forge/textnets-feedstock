@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.4.11" %}
-{% set hash = "907d1c8068bbdd6f11386c334d145d0a0574cbdee948437029406da42e09f18d" %}
+{% set version = "0.5.0" %}
+{% set hash = "9316be849791a862a155ad9664712746c76c070304c28c4d1fb17002b2b0e3e1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,27 +12,24 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  entry_points:
-    - textnets = textnets.cli:main
 
 requirements:
   host:
     - python >=3.7
     - pip
   run:
-    - python >=3.7
-    - click >=7.0
-    - pandas >1.1
-    - cairocffi >=1.1
-    - python-igraph >=0.8
-    - spacy >=2.3
-    - scipy >=1.5
-    - toolz
-    - leidenalg >=0.8
-    - typing-extensions
     - cached-property
+    - cairocffi >=1.1
+    - leidenalg >=0.8
+    - pandas >1.2
+    - python >=3.7
+    - python-igraph >=0.9
+    - scipy >=1.7
+    - spacy >=3.0
+    - toolz
+    - typing-extensions
 
 test:
   imports:
