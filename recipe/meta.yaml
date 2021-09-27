@@ -21,6 +21,7 @@ requirements:
     - pip
     - poetry >=1.1
     - python >=3.7
+    - {{ compiler('c') }}
   run:
     - cached-property
     - cairocffi >=1.1
