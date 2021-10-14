@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.5.2" %}
-{% set hash = "bd1d2fcbaac1379fc953a7016a1b661b9948303b25f32af7a8968003d37a301d" %}
+{% set version = "0.6.0" %}
+{% set hash = "d23a204c88f7307c160dfe8703fd867c4ffbe9ce590966e79396fb531a5d7482" %}
 
 package:
   name: {{ name|lower }}
@@ -22,13 +22,13 @@ requirements:
     - python >=3.7
   run:
     - cached-property
-    - cairocffi >=1.1
+    - cairocffi >=1.2
     - leidenalg >=0.8
     - pandas >=1.3
     - python >=3.7
     - python-igraph >=0.9
     - scipy >=1.7
-    - spacy >=3.0
+    - spacy >=3.1
     - toolz
     - typing-extensions
 
