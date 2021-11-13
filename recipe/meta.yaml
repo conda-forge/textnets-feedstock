@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.6.0" %}
-{% set hash = "d23a204c88f7307c160dfe8703fd867c4ffbe9ce590966e79396fb531a5d7482" %}
+{% set version = "0.7.0" %}
+{% set hash = "e9ca605ab36aea93d8bf6230f843065f9c5aa26af9237eb4bdab5f59a3dfb129" %}
 
 package:
   name: {{ name|lower }}
@@ -11,8 +11,8 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
 requirements:
@@ -45,7 +45,7 @@ about:
   home: https://textnets.readthedocs.io
   license: GPL-3.0-or-later
   license_file: LICENSE
-  summary: 'Automated text analysis with networks'
+  summary: Automated text analysis with networks
 
   description: |
     textnets represents collections of texts as networks of documents and
