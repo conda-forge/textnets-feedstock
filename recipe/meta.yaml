@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.7.0" %}
-{% set hash = "e9ca605ab36aea93d8bf6230f843065f9c5aa26af9237eb4bdab5f59a3dfb129" %}
+{% set version = "0.7.1" %}
+{% set hash = "5ec5ffdc79ff10add124c0238f1a91709fb0ce02f6d186a2946106f3b7817ad3" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
