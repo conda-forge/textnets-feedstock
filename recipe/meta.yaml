@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.7.1" %}
-{% set hash = "5ec5ffdc79ff10add124c0238f1a91709fb0ce02f6d186a2946106f3b7817ad3" %}
+{% set version = "0.8.0" %}
+{% set hash = "0a298321b2f7a8c1bf06d0ff28f5978be4dfe4ce2cc5edd47e9431afa1efa133" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   host:
@@ -23,17 +23,15 @@ requirements:
     - python
     - {{ compiler('c') }}
   run:
-    - cached-property
-    - cairocffi >=1.2  # [not win]
+    - cairocffi >=1.3  # [not win]
     - leidenalg >=0.8
-    - pandas >=1.3
+    - pandas >=1.4
     - pycairo >1.20  # [win]
     - python
-    - python-igraph >=0.9,!=0.9.9
-    - scipy >=1.7
-    - spacy >=3.2
+    - python-igraph >=0.9,!=0.9.9,!=0.9.10
+    - scipy >=1.8
+    - spacy >=3.3
     - toolz
-    - typing-extensions
 
 test:
   imports:
