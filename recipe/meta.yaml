@@ -28,7 +28,7 @@ requirements:
     - leidenalg >=0.8
     - pandas >=1.4
     - pycairo >1.21  # [win]
-    - python >=3.8
+    - python
     - python-igraph >=0.9.11
     - scipy >=1.8
     - spacy >=3.3
