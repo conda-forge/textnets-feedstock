@@ -16,12 +16,13 @@ build:
   skip: true  # [py<38]
 
 requirements:
-  host:
+  build:
+    - {{ compiler('c') }}
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29
+  host:
     - pip
     - poetry >=1.1
-    - python
-    - {{ compiler('c') }}
   run:
     - cairocffi >=1.3  # [not win]
     - leidenalg >=0.8
