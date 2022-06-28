@@ -40,6 +40,8 @@ test:
     - textnets
   requires:
     - pytest
+  commands:
+    - pytest
 
 about:
   home: https://textnets.readthedocs.io
