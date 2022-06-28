@@ -37,9 +37,14 @@ requirements:
     - wasabi >=0.9
 
 test:
+  source_files:
+    - tests
   imports:
     - textnets
   requires:
+    - pytest
+    - spacy-model-en_core_web_sm =3.3.0
+  commands:
     - pytest
 
 about:
