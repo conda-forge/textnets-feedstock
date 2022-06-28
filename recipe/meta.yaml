@@ -42,7 +42,7 @@ test:
   requires:
     - pytest
   commands:
-    - pytest
+    - pytest tests
 
 about:
   home: https://textnets.readthedocs.io
