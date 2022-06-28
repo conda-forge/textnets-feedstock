@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.8.0" %}
-{% set hash = "0a298321b2f7a8c1bf06d0ff28f5978be4dfe4ce2cc5edd47e9431afa1efa133" %}
+{% set version = "0.8.1" %}
+{% set hash = "100a69a1a082280fac602083c930df0bd539cda240ee505b09ff1ca25cba222b" %}
 
 package:
   name: {{ name|lower }}
@@ -16,27 +16,35 @@ build:
   skip: true  # [py<38]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - cython >=0.29
     - pip
     - poetry >=1.1
     - python
-    - {{ compiler('c') }}
   run:
     - cairocffi >=1.3  # [not win]
     - leidenalg >=0.8
     - pandas >=1.4
-    - pycairo >1.20  # [win]
+    - pycairo >=1.21  # [win]
     - python
-    - python-igraph >=0.9,!=0.9.9,!=0.9.10
+    - python-igraph >=0.9.11
     - scipy >=1.8
     - spacy >=3.3
-    - toolz
+    - toolz >=0.11
+    - wasabi >=0.9
 
 test:
+  source_files:
+    - tests
   imports:
     - textnets
   requires:
+    - pytest
+    - spacy-model-en_core_web_sm =3.3.0
+  commands:
     - pytest
 
 about:
