@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.8.3" %}
-{% set hash = "9efc88c5eabfe6d1651cd510a22dc35e64ea1a722105fb59544144e278f13bf6" %}
+{% set version = "0.8.4" %}
+{% set hash = "dc90b9d35a822318226e16e28c835e4bde06c1082278200df0af5080a97f5b25" %}
 
 package:
   name: {{ name|lower }}
