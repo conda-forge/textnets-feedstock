@@ -26,7 +26,7 @@ requirements:
     - poetry >=1.1
     - python
   run:
-    - cairocffi >=1.4  # [not win]
+    - cairocffi >=1.3  # [not win]
     - leidenalg >=0.9
     - pandas >=1.5
     - pycairo >=1.21  # [win]
