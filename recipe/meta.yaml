@@ -35,6 +35,7 @@ requirements:
     - scipy >=1.9
     - spacy >=3.4
     - toolz >=0.12
+    - tqdm
     - wasabi >=0.10
 
 test:
