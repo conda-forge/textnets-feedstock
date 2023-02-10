@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.8.6" %}
-{% set hash = "c657ac08b2fc44d257260334081a378c1f7a281802b2794fadc4f0b8189938ad" %}
+{% set version = "0.8.7" %}
+{% set hash = "624dee3c947c9a9355b5265dd99193416762ce3c137dc366f9e426a529c0db2b" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<38]
 
@@ -23,7 +23,7 @@ requirements:
   host:
     - cython >=0.29
     - pip
-    - poetry >=1.1
+    - poetry >=1.2
     - python
   run:
     - cairocffi >=1.4  # [not win]
@@ -32,8 +32,8 @@ requirements:
     - pycairo >=1.23  # [win]
     - python
     - python-igraph >=0.10
-    - scipy >=1.9
-    - spacy >=3.4
+    - scipy >=1.10
+    - spacy >=3.5
     - toolz >=0.12
     - tqdm
     - wasabi >=0.10
@@ -46,7 +46,7 @@ test:
   requires:
     - pytest
     - concepts
-    - spacy-model-en_core_web_sm =3.4.0
+    - spacy-model-en_core_web_sm =3.5.0
   commands:
     - pytest
 
