@@ -1,6 +1,6 @@
 {% set name = "textnets" %}
-{% set version = "0.8.8" %}
-{% set hash = "ae35c489a3d872dace348673d437793920f0e73f03d853d78b94e778a8b31544" %}
+{% set version = "0.9.1" %}
+{% set hash = "dfa4dd569f7041f70e501ed818750121065897508ef79d14cfa433b561c5a208" %}
 
 package:
   name: {{ name|lower }}
@@ -28,12 +28,12 @@ requirements:
   run:
     - cairocffi >=1.4  # [not win]
     - leidenalg >=0.9
-    - pandas >=1.5
+    - pandas >=2.0
     - pycairo >=1.23  # [win]
     - python
     - python-igraph >=0.10
     - scipy >=1.10
-    - spacy >=3.5.1
+    - spacy >=3.5.3
     - toolz >=0.12
     - tqdm
     - wasabi >=0.10
