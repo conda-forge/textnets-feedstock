@@ -28,12 +28,12 @@ requirements:
   run:
     - cairocffi >=1.4  # [not win]
     - leidenalg >=0.9
-    - pandas >=1.5
+    - pandas >=2.0
     - pycairo >=1.23  # [win]
     - python
     - python-igraph >=0.10
     - scipy >=1.10
-    - spacy >=3.5.1
+    - spacy >=3.5.3
     - toolz >=0.12
     - tqdm
     - wasabi >=0.10
