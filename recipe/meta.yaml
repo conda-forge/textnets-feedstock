@@ -11,13 +11,14 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<39]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - python  # [build_platform != target_platform]
   host:
