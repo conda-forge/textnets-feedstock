@@ -30,7 +30,7 @@ requirements:
   run:
     - jieba >=0.42
     - leidenalg
-    - matplotlib
+    - matplotlib-base
     - pandas >=2.2
     - python
     - python-igraph
